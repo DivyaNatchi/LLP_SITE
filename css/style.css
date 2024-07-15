@@ -188,7 +188,7 @@ h6 {
 }
 
 #intro .carousel-item::before {
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
@@ -563,7 +563,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-header h3::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 120px;
@@ -574,7 +574,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-header h3::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 40px;
@@ -609,7 +609,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #featured-services .box-bg {
-  background-image: linear-gradient(0deg, #000000 0%, #242323 50%, #000000 100%);
+  background-image: linear-gradient(
+    0deg,
+    #000000 0%,
+    #242323 50%,
+    #000000 100%
+  );
 }
 
 #featured-services i {
@@ -640,6 +645,41 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
+/* Founder's message Section
+--------------------------------*/
+
+#founder-message {
+  background: #fff;
+  background-size: cover;
+  padding: 60px 0 40px 0;
+}
+
+.founder-message {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+.founder-message img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.founder-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.founder-message p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
+}
+
 /* About Us Section
 --------------------------------*/
 
@@ -651,7 +691,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -671,6 +711,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 20px;
+  min-height: 600px;
 }
 
 #about .about-col .img {
@@ -691,7 +732,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 50%;
   text-align: center;
   border: 4px solid #fff;
-  left: calc( 50% - 32px);
+  left: calc(50% - 32px);
   bottom: -30px;
   transition: 0.3s;
 }
@@ -734,6 +775,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #333;
   margin-bottom: 0;
   padding: 0 20px 20px 20px;
+  text-align: justify;
+}
+
+#about .about-col li {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  margin-bottom: 0;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
 }
 
 /* Services Section
@@ -786,7 +837,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -850,7 +902,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #skills .progress-bar {
   width: 1px;
   text-align: left;
-  transition: .9s;
+  transition: 0.9s;
 }
 
 /* Facts Section
@@ -864,7 +916,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #facts::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -1387,6 +1439,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
   color: #eee;
+  text-align: justify;
 }
 
 #footer .footer-top .social-links a {
@@ -1420,7 +1473,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top h4::before,
 #footer .footer-top h4::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1481,6 +1534,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
+#footer .footer-top .footer-newsletter p {
+  text-align: justify;
+}
+
 #footer .footer-top .footer-newsletter input[type="email"] {
   border: 0;
   padding: 6px 8px;
@@ -1516,6 +1573,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
+/* about us section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-col {
+    min-height: 723px !important;
+  }
+}
 
 @media (min-width: 768px) {
   #contact .contact-address,
@@ -1525,8 +1589,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #contact .contact-phone {
-    border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
+  }
+
+  #contact .contact-email {
+    border-left: 1px solid #ddd;
   }
 }
 
