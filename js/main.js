@@ -203,6 +203,11 @@
     allowPageScroll: "vertical",
   });
 
+  // faster than the default 5000ms
+  $(".carousel").carousel({
+    interval: 3000,
+  });
+
   // Skills section
   $("#skills").waypoint(
     function () {

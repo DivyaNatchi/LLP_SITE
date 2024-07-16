@@ -562,6 +562,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-bottom: 15px;
 }
 
+.section-header h5 {
+  position: relative;
+}
+
 .section-header h3::before {
   content: "";
   position: absolute;
@@ -583,11 +587,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: 0;
   left: calc(50% - 20px);
 }
+.section-header h5::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 2px;
+  background: #ddd;
+  bottom: -3px;
+  /* left: calc(20% - 60px); */
+}
 
 .section-header p {
   text-align: center;
   padding-bottom: 30px;
   color: #333;
+  text-align: justify;
 }
 
 /* Section with background
@@ -661,15 +676,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 .founder-message img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .founder-title {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
 }
 .founder-message p {
   font-size: 14px;
@@ -683,7 +698,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* About Us Section
 --------------------------------*/
 
-#about {
+#about,
+#team {
   background: url("../img/about-bg.jpg") center top no-repeat fixed;
   background-size: cover;
   padding: 60px 0 40px 0;
@@ -700,8 +716,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: rgba(255, 255, 255, 0.92);
   z-index: 9;
 }
+#team::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 9;
+}
 
 #about .container {
+  position: relative;
+  z-index: 10;
+}
+
+#team .container {
   position: relative;
   z-index: 10;
 }
@@ -1218,10 +1249,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Team Section
 --------------------------------*/
 
-#team {
+/* #team {
   background: #fff;
   padding: 60px 0;
-}
+} */
 
 #team .member {
   text-align: center;
