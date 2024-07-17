@@ -862,12 +862,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-left: 60px;
   line-height: 24px;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /* Call To Action Section
 --------------------------------*/
 
-#call-to-action {
+/* #call-to-action {
   background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
     url(../img/call-to-action-bg.jpg) fixed center center;
   background-size: cover;
@@ -902,12 +903,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #call-to-action .cta-btn:hover {
   background: #18d26e;
   border: 2px solid #18d26e;
-}
+} */
 
-/* Call To Action Section
+/* Skills Section
 --------------------------------*/
 
-#skills {
+/* #skills {
   padding: 60px 0;
 }
 
@@ -934,12 +935,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 1px;
   text-align: left;
   transition: 0.9s;
-}
+} */
 
 /* Facts Section
 --------------------------------*/
 
-#facts {
+/* #facts {
   background: url("../img/facts-bg.jpg") center top no-repeat fixed;
   background-size: cover;
   padding: 60px 0 0 0;
@@ -981,12 +982,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #facts .facts-img {
   text-align: center;
   padding-top: 30px;
-}
+} */
 
 /* Portfolio Section
 --------------------------------*/
 
-#portfolio {
+/* #portfolio {
   padding: 60px 0;
 }
 
@@ -1133,12 +1134,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-}
+} */
 
 /* Clients Section
 --------------------------------*/
 
-#clients {
+/* #clients {
   padding: 60px 0;
 }
 
@@ -1170,12 +1171,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #clients .owl-dot.active {
   background-color: #18d26e;
-}
+} */
 
 /* Testimonials Section
 --------------------------------*/
 
-#testimonials {
+/* #testimonials {
   padding: 60px 0;
 }
 
@@ -1244,7 +1245,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #testimonials .owl-dot.active {
   background-color: #18d26e;
-}
+} */
 
 /* Team Section
 --------------------------------*/
@@ -1606,9 +1607,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 /* about us section */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .about-col {
     min-height: 723px !important;
+  }
+
+  .about-col .list-group-plan {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .about-col .list-group-plan {
+    margin-top: 50px;
   }
 }
 
