@@ -591,7 +591,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   content: "";
   position: absolute;
   display: block;
-  width: 280px;
+  width: 255px;
   height: 2px;
   background: #ddd;
   bottom: -3px;
@@ -825,6 +825,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   background-size: cover;
   padding: 60px 0 40px 0;
+}
+
+#services .commitment-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 #services .box {
